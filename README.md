@@ -32,6 +32,9 @@ Put the file 'pre-commit' in '.git/hooks/pre-commit'.
 ## References
 
 https://docs.lando.dev/guides/lando-101/lando-tooling.html
+
 https://code.tutsplus.com/tutorials/using-php-codesniffer-with-wordpress-installing-and-using-the-wordpress-rules--cms-26443
+
 https://dev.to/bdelespierre/how-to-setup-git-commit-hooks-for-php-42d1
+
 https://github.com/WickedReports/phpcs-pre-commit-hook
