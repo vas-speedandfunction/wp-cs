@@ -25,6 +25,42 @@ And you should see the following output (or something very similar):
 
 Put the file 'pre-commit' in '.git/hooks/pre-commit'.
 
+Now CS run on each commit command and check files.
+
+For example you can add tailing space in line
+
+```define( 'WP_USE_THEMES', true ); ```
+
+in your index.php file.
+If you try to commit it you can see:
+
+```
+$ git add index.php
+$ git commit -m "change index.php"
+Checking PHP Lint...
+No syntax errors detected in /.../index.php
+Running Code Sniffer. Code standard WordPress.
+E 1 / 1 (100%)
+
+
+
+FILE: /.../index.php
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 14 | ERROR | [x] Whitespace found at end of line
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+Time: 219ms; Memory: 8MB
+
+Fix the error before commit!
+Run
+  ./vendor/bin/phpcbf --standard=WordPress  /.../index.php
+for automatic fix or fix it manually.
+```
+
 [Optional] Add in your '.gitignore' the line:
 
 ```vendor/```
