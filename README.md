@@ -67,7 +67,7 @@ for automatic fix or fix it manually.
 
 [Optional] If you need to check not only .php files, please fix the 4th line in pre-commit file to:
 
-```STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.*````
+STAGED_FILES_CMD=`git diff --cached --name-only --diff-filter=ACMR HEAD | grep \\\\.*`
 
 ## References
 
